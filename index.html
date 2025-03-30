@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementacion de sistemas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #2A0944 0%, #3B185F 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #A060FA 0%, #C800FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes slide-in-left {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slide-in-right {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    .animate-slide-in-left {
+        animation: slide-in-left 0.5s ease-out;
+    }
+
+    .animate-slide-in-right {
+        animation: slide-in-right 0.5s ease-out;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    </style>
+</head>
+
+<body class="text-gray-100">
+    <!-- Navegación -->
+    <nav class="fixed w-full glass-card z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold gradient-text">PeñaHub</span>
+                <div class="space-x-8">
+                    <a href="#1" class="hover:text-purple-300 transition-colors nav-link">capa 1</a>
+                    <a href="#2-3" class="hover:text-purple-300 transition-colors nav-link">capa 2 y 3</a>
+                    <a href="#4-5" class="hover:text-purple-300 transition-colors nav-link">capa 4 y 5</a>
+                    <a href="#6-7" class="hover:text-purple-300 transition-colors nav-link">capa 6 y 7</a>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-6 gradient-text">Implementacion de sistemas</h1>
+        </div>
+    </section>
+
+    </div>
+
+    <section id ="1" class="py-12 px-4 animate-fade-in">
+        <div class="max-w-6xl mx-auto">
+            <!-- Topologías OSI -->
+            <div class="bg-purple-900/40 p-6 rounded-xl animate-slide-in-left">
+                <h3 class="text-xl font-semibold mb-6 text-purple-300">🌐 Modelo OSI - Capa Física Detallada</h3>
+                
+                <!-- Capa 1 Mejorada -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">🔌 Capa 1 - Física (Topologías y Medios)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                        
+                        <!-- Tipos Físicos Expandidos -->
+                        <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                            <h5 class="font-medium mb-2">🧱 Topologías de Cableado</h5>
+                            <ul class="space-y-3 text-sm">
+                                <li class="animate-pulse">
+                                    <div class="flex items-center">
+                                        <i data-feather="chevron-right" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                        <span class="font-medium">Bus (Coaxial)</span>
+                                    </div>
+                                    <div class="ml-6 text-xs opacity-80">
+                                        <p>• 10BASE2/5 Ethernet</p>
+                                        <p>• Canal compartido</p>
+                                        <p>• Vulnerable a colisiones</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="animate-pulse">
+                                    <div class="flex items-center">
+                                        <i data-feather="chevron-right" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                        <span class="font-medium">Estrella (Switch)</span>
+                                    </div>
+                                    <div class="ml-6 text-xs opacity-80">
+                                        <p>• 100BASE-TX Moderno</p>
+                                        <p>• Falla aislada por nodo</p>
+                                        <p>• Escalable</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="animate-pulse">
+                                    <div class="flex items-center">
+                                        <i data-feather="chevron-right" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                        <span class="font-medium">Anillo (Token Ring)</span>
+                                    </div>
+                                    <div class="ml-6 text-xs opacity-80">
+                                        <p>• FDDI/Token Ring</p>
+                                        <p>• Datos unidireccionales</p>
+                                        <p>• Requiere redundancia</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Características Técnicas -->
+                        <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                            <h5 class="font-medium mb-2">⚡ Especificaciones Técnicas</h5>
+                            <ul class="space-y-3 text-sm">
+                                <li>
+                                    <div class="flex items-center">
+                                        <i data-feather="zap" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                        <span>Medios de Transmisión</span>
+                                    </div>
+                                    <div class="ml-6 text-xs opacity-80">
+                                        <p>• Cobre: UTP Cat6 (100m)</p>
+                                        <p>• Fibra: Multimodo (2km)</p>
+                                    <p>• Wireless: 802.11ax</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="maximize-2" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Parámetros Clave</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Ancho de Banda: 1Gbps-100Gbps</p>
+                                    <p>• Latencia: &lt;1ms (fibra)</p>
+                                    <p>• BER: 10⁻¹² (fibra)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="dollar-sign" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Consideraciones Económicas</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Bus: $0.5/m (coaxial)</p>
+                                    <p>• Estrella: $3/m (Cat6 + switch)</p>
+                                    <p>• Fibra: $15/m instalado</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa Mejorada -->
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">🆚 Capa Física vs Lógica</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🌍 Física</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="cpu" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Hardware tangible</p>
+                                        <p class="opacity-70">NICs, cables, switches</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="tool" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Topologías rígidas</p>
+                                        <p class="opacity-70">Cableado estructurado</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">💻 Lógica</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="code" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Software/configurable</p>
+                                        <p class="opacity-70">VLANs, VPNs, TCP/IP</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="cloud" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Protocolos dinámicos</p>
+                                        <p class="opacity-70">BGP, OSPF, HTTPS</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo Técnico -->
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">💻 Implementación Real</h4>
+                    <div class="space-y-4 text-purple-200 text-sm">
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="server" class="w-6 h-6 mr-3 text-green-400"></i>
+                            <div>
+                                <p class="font-medium">Data Center Tier III</p>
+                                <p class="text-xs opacity-80">Topología física: Estrella jerárquica</p>
+                                <p class="text-xs opacity-80">Medios: Fibra OM4 (40Gbps)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="wifi" class="w-6 h-6 mr-3 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">WiFi 6 Empresarial</p>
+                                <p class="text-xs opacity-80">Física: Malla de APs</p>
+                                <p class="text-xs opacity-80">Lógica: CSMA/CA + WPA3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id ="2-3" class="py-12 px-4 animate-fade-in">
+    <div class="max-w-6xl mx-auto">
+        <!-- Capas 2 y 3 -->
+        <div class="bg-purple-900/40 p-6 rounded-xl animate-slide-in-left">
+            <h3 class="text-xl font-semibold mb-6 text-purple-300">🌐 Modelo OSI - Capas 2 y 3</h3>
+
+            <!-- Capa 2 - Enlace -->
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">🔗 Capa 2 - Enlace de Datos</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Topologías Lógicas -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🕸️ Topologías Lógicas</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="git-merge" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">Ethernet (CSMA/CD)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Dominio de colisión</p>
+                                    <p>• Backoff exponencial</p>
+                                    <p>• 802.3 (10BASE-T a 100GBASE-T)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="circle" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">VLAN (IEEE 802.1Q)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Tagging (12-bit VLAN ID)</p>
+                                    <p>• Segmentación lógica</p>
+                                    <p>• Trunking (ISL/Dot1Q)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="radio" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">Wireless (CSMA/CA)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• 802.11 a/b/g/n/ac/ax</p>
+                                    <p>• RTS/CTS handshake</p>
+                                    <p>• BSSID/ESSID</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Especificaciones Técnicas Capa 2 -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">📊 Parámetros Clave</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="hash" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Direccionamiento MAC</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Formato: 00:1A:C2:7B:00:47</p>
+                                    <p>• OUI (24 bits fabricante)</p>
+                                    <p>• Unicast/Multicast/Broadcast</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="settings" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Configuraciones Avanzadas</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• STP (802.1D)</p>
+                                    <p>• LACP (Agregación de enlaces)</p>
+                                    <p>• MTU (1500-9000 bytes)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="shield" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Seguridad</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• 802.1X (Autenticación)</p>
+                                    <p>• Port Security</p>
+                                    <p>• DHCP Snooping</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capa 3 - Red -->
+            <div class="mt-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">🌍 Capa 3 - Red</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Protocolos de Enrutamiento -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🗺️ Protocolos de Routing</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="compass" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">OSPF (Link-State)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Áreas (Backbone/Stub)</p>
+                                    <p>• Coste basado en ancho de banda</p>
+                                    <p>• LSA Types 1-7</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="globe" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">BGP (Path-Vector)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• ASN (16/32 bits)</p>
+                                    <p>• Atributos: AS_PATH, NEXT_HOP</p>
+                                    <p>• eBGP vs iBGP</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="zap" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">MPLS (Conmutación de etiquetas)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• LER/LSR</p>
+                                    <p>• FEC (Clases de equivalencia)</p>
+                                    <p>• Label Stack (LDP/RSVP)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Especificaciones Técnicas Capa 3 -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">📡 Funcionalidades Avanzadas</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Direccionamiento IP</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• IPv4 (32 bits) vs IPv6 (128 bits)</p>
+                                    <p>• Subnetting (VLSM/CIDR)</p>
+                                    <p>• NAT (Estático/Dinámico/PAT)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="clock" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Parámetros de Red</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• TTL (Time To Live)</p>
+                                    <p>• TOS (Type of Service)</p>
+                                    <p>• QoS (DSCP/CoS)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="lock" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Seguridad de Capa 3</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• ACLs (Estándar/Extendidas)</p>
+                                    <p>• IPsec (AH/ESP)</p>
+                                    <p>• GRE Túneles</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa Capas 2-3 -->
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">🆚 Comparativa Capas 2 vs 3</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🔗 Capa 2 (Switch)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="hard-drive" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Opera con MAC addresses</p>
+                                        <p class="opacity-70">Tabla CAM</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="arrow-right-circle" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Dominio de broadcast</p>
+                                        <p class="opacity-70">VLANs para segmentar</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🌐 Capa 3 (Router)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="navigation" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Opera con IP addresses</p>
+                                        <p class="opacity-70">Tabla de routing</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Interconexión de redes</p>
+                                        <p class="opacity-70">NAT/PAT</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplos Integrados -->
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">💻 Escenarios Reales</h4>
+                    <div class="space-y-4 text-purple-200 text-sm">
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="database" class="w-6 h-6 mr-3 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Data Center Moderno</p>
+                                <p class="text-xs opacity-80">Capa 2: VXLAN (Extensión de VLAN)</p>
+                                <p class="text-xs opacity-80">Capa 3: ECMP + BGP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="cloud" class="w-6 h-6 mr-3 text-green-400"></i>
+                            <div>
+                                <p class="font-medium">ISP Multi-Servicio</p>
+                                <p class="text-xs opacity-80">Capa 2: PPPoE (Acceso cliente)</p>
+                                <p class="text-xs opacity-80">Capa 3: MPLS + VRF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id ="4-5" class="py-12 px-4 animate-fade-in">
+    <div class="max-w-6xl mx-auto">
+        <!-- Capas 4 y 5 -->
+        <div class="bg-purple-900/40 p-6 rounded-xl animate-slide-in-left">
+            <h3 class="text-xl font-semibold mb-6 text-purple-300">🌐 Modelo OSI - Capas 4 y 5</h3>
+
+            <!-- Capa 4 - Transporte -->
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">📦 Capa 4 - Transporte (Flujo de Datos)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Protocolos de Transporte -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🔁 Mecanismos de Transporte</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="shield" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">TCP (Orientado a Conexión)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• 3-Way Handshake (SYN/SYN-ACK/ACK)</p>
+                                    <p>• Control de Congestión (Reno/CUBIC)</p>
+                                    <p>• Números de Secuencia/Acknowledgement</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="zap" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">UDP (No Orientado)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Datagramas independientes</p>
+                                    <p>• Checksum opcional</p>
+                                    <p>• Uso: DNS/VoIP/Streaming</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="activity" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">SCTP (Avanzado)</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Multihoming</p>
+                                    <p>• Message Oriented</p>
+                                    <p>• Uso: Telecom (SIGTRAN)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Parámetros Técnicos Capa 4 -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">⚙️ Configuraciones Clave</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="hash" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Puertos y Sockets</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Rango: 0-65535</p>
+                                    <p>• Well-Known (0-1023)</p>
+                                    <p>• Ephemeral (49152-65535)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="sliders" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Control de Flujo</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Ventana Deslizante (RWND)</p>
+                                    <p>• Escalado de Ventana (WSOPT)</p>
+                                    <p>• Algoritmos: Tahoe/Reno/BBR</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="lock" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Seguridad</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• TLS/SSL Handshake</p>
+                                    <p>• SYN Flood Protection</p>
+                                    <p>• Port Knocking</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capa 5 - Sesión -->
+            <div class="mt-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">🎭 Capa 5 - Sesión (Diálogo entre Apps)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Gestión de Sesiones -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🤝 Protocolos de Sesión</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="link" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">Sesiones Persistentes</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Cookies HTTP (Session ID)</p>
+                                    <p>• Tokens JWT</p>
+                                    <p>• OAuth 2.0 Flujos</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="phone-call" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">Control de Diálogo</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• SIP (Session Initiation Protocol)</p>
+                                    <p>• H.323 (Videoconferencia)</p>
+                                    <p>• WebSockets (WS/WSS)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="refresh-cw" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">Sincronización</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Checkpoints</p>
+                                    <p>• Recovery de Sesiones</p>
+                                    <p>• NFS Lock Manager</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Funcionalidades Avanzadas Capa 5 -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🔐 Gestión de Sesiones</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="clock" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Timeouts y Keepalives</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• TCP Keep-Alive (7200s)</p>
+                                    <p>• HTTP Keep-Alive: timeout=5</p>
+                                    <p>• Websockets Ping/Pong</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="user-check" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Autenticación</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Challenge-Response</p>
+                                    <p>• SSO (SAML/OIDC)</p>
+                                    <p>• Sesiones TLS 1.3</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="cloud" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Distribución</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Sticky Sessions (Load Balancers)</p>
+                                    <p>• Redis Session Store</p>
+                                    <p>• JWT Stateless</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa Capas 4-5 -->
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">🆚 Comparativa Capas 4 vs 5</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">📦 Capa 4 (Transporte)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="box" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Segmentación de datos</p>
+                                        <p class="opacity-70">MSS: 1460 bytes (TCP)</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="anchor" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Control de congestión</p>
+                                        <p class="opacity-70">Algoritmo CUBIC</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🎭 Capa 5 (Sesión)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="users" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Gestión de diálogos</p>
+                                        <p class="opacity-70">Tokens de sesión</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="unlock" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Control de acceso</p>
+                                        <p class="opacity-70">OAuth 2.0/JWT</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplos Reales -->
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">💻 Casos de Uso Actuales</h4>
+                    <div class="space-y-4 text-purple-200 text-sm">
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="video" class="w-6 h-6 mr-3 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Streaming 4K</p>
+                                <p class="text-xs opacity-80">Capa 4: QUIC (HTTP/3)</p>
+                                <p class="text-xs opacity-80">Capa 5: Adaptive Bitrate</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="shopping-cart" class="w-6 h-6 mr-3 text-green-400"></i>
+                            <div>
+                                <p class="font-medium">E-Commerce</p>
+                                <p class="text-xs opacity-80">Capa 4: TLS 1.3 Handshake</p>
+                                <p class="text-xs opacity-80">Capa 5: Carrito persistente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id ="6-7" class="py-12 px-4 animate-fade-in">
+    <div class="max-w-6xl mx-auto">
+        <!-- Capas 6 y 7 -->
+        <div class="bg-purple-900/40 p-6 rounded-xl animate-slide-in-left">
+            <h3 class="text-xl font-semibold mb-6 text-purple-300">🌐 Modelo OSI - Capas 6 y 7</h3>
+
+            <!-- Capa 6 - Presentación -->
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">🎨 Capa 6 - Presentación (Sintaxis de Datos)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Transformación de Datos -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🔄 Codificación/Transformación</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="code" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">Formatos Estructurados</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• JSON (application/json)</p>
+                                    <p>• Protocol Buffers (binary)</p>
+                                    <p>• ASN.1 (X.509 Certificates)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="lock" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">Cifrado Avanzado</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• TLS 1.3 (AEAD ciphers)</p>
+                                    <p>• AES-GCM (256-bit)</p>
+                                    <p>• ECDHE (Curvas elípticas)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="package" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">Compresión</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Brotli (text/html)</p>
+                                    <p>• LZ4 (tiempo real)</p>
+                                    <p>• Zstandard (DBs)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Estándares Capa 6 -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">📐 Estándares Clave</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="globe" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Codificación Universal</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• UTF-8 (93% web)</p>
+                                    <p>• BOM (Byte Order Mark)</p>
+                                    <p>• Normalización Unicode</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="film" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Multimedia</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• Codecs: H.265/HEVC</p>
+                                    <p>• WebP/AVIF (imágenes)</p>
+                                    <p>• WebAssembly (binario)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="database" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Serialización</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• MessagePack (binario)</p>
+                                    <p>• BSON (MongoDB)</p>
+                                    <p>• Avro (Schema-based)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capa 7 - Aplicación -->
+            <div class="mt-8">
+                <h4 class="text-lg font-semibold mb-4 text-purple-300">🚀 Capa 7 - Aplicación (Servicios de Red)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-purple-200">
+                    
+                    <!-- Protocolos de Aplicación -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🌍 Protocolos de Alto Nivel</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="chrome" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                    <span class="font-medium">Web Moderna</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• HTTP/2 (Multiplexación)</p>
+                                    <p>• HTTP/3 (QUIC sobre UDP)</p>
+                                    <p>• gRPC (Protobufs)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="cloud" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span class="font-medium">APIs Distribuidas</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• REST (HATEOAS)</p>
+                                    <p>• GraphQL (Schema Stitching)</p>
+                                    <p>• Webhooks (Callbacks)</p>
+                                </div>
+                            </li>
+                            
+                            <li class="animate-pulse">
+                                <div class="flex items-center">
+                                    <i data-feather="mail" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                                    <span class="font-medium">Comunicación</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• SMTP (STARTTLS)</p>
+                                    <p>• XMPP (Jabber)</p>
+                                    <p>• Matrix (Federado)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicios Avanzados -->
+                    <div class="bg-purple-800/30 p-4 rounded-lg hover:scale-105 transition-transform">
+                        <h5 class="font-medium mb-2">🛡️ Seguridad y Gestión</h5>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="key" class="w-4 h-4 mr-2 text-red-400"></i>
+                                    <span>Autenticación</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• OAuth 2.0 (Flujos)</p>
+                                    <p>• OpenID Connect</p>
+                                    <p>• WebAuthn (FIDO2)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="monitor" class="w-4 h-4 mr-2 text-purple-400"></i>
+                                    <span>Servicios en Tiempo Real</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• WebSocket (ws://, wss://)</p>
+                                    <p>• WebRTC (STUN/TURN)</p>
+                                    <p>• MQTT (IoT)</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flex items-center">
+                                    <i data-feather="dns" class="w-4 h-4 mr-2 text-green-400"></i>
+                                    <span>Resolución de Nombres</span>
+                                </div>
+                                <div class="ml-6 text-xs opacity-80">
+                                    <p>• DNS over HTTPS</p>
+                                    <p>• DNSSEC (ZSK/KSK)</p>
+                                    <p>• Service Discovery (mDNS)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa Capas 6-7 -->
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">🆚 Comparativa Capas 6 vs 7</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🎨 Capa 6 (Presentación)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="eye-off" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Ofuscación de datos</p>
+                                        <p class="opacity-70">Base64 URL-safe</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="cpu" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Compresión binaria</p>
+                                        <p class="opacity-70">Ratio 10:1 (Brotli)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-purple-200">
+                            <h5 class="font-medium mb-2">🚀 Capa 7 (Aplicación)</h5>
+                            <ul class="space-y-2 text-xs">
+                                <li class="flex items-center">
+                                    <i data-feather="command" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Lógica de negocio</p>
+                                        <p class="opacity-70">Microservicios</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="shield" class="w-4 h-4 mr-2"></i>
+                                    <div>
+                                        <p>Zero Trust</p>
+                                        <p class="opacity-70">JWT Validation</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementaciones Reales -->
+                <div class="bg-purple-900/40 p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-300">💻 Arquitecturas Modernas</h4>
+                    <div class="space-y-4 text-purple-200 text-sm">
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="cast" class="w-6 h-6 mr-3 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Streaming 8K</p>
+                                <p class="text-xs opacity-80">Capa 6: AV1 Codec</p>
+                                <p class="text-xs opacity-80">Capa 7: DASH/HLS</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center bg-purple-800/20 p-3 rounded-lg">
+                            <i data-feather="smartphone" class="w-6 h-6 mr-3 text-green-400"></i>
+                            <div>
+                                <p class="font-medium">Apps Móviles</p>
+                                <p class="text-xs opacity-80">Capa 6: FlatBuffers</p>
+                                <p class="text-xs opacity-80">Capa 7: GraphQL Batching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="glass-card mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-purple-300 mb-4">© 2025 PeñaHub. Todos los derechos reservados.</div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-purple-300 hover:text-white transition-colors">
+                    <i data-feather="github"></i>
+                </a>
+                <!-- Más redes sociales... -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
